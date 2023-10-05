@@ -3,13 +3,10 @@ package pl.javastart.task;
 import java.util.Scanner;
 
 class NumberGuesser {
-    private int usersNumber;
     private final Scanner scanner = new Scanner(System.in);
 
     void run() {
-        do {
-            usersNumber = getUsersNumber();
-        } while (!isValidNumber(usersNumber));
+        while (!isValidNumber(getUsersNumber())) {}
 
         System.out.println("Twoja liczba jest ok");
     }
